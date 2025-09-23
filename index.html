@@ -4,254 +4,227 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Raees Pharmacy • Brooklyn, NY</title>
-  <meta name="description" content="Neighborhood pharmacy in Brooklyn, NY. Fast prescriptions, vaccines, OTC essentials, and personal care. Call 718-856-5998." />
+  <meta name="description" content="Neighborhood pharmacy in Brooklyn, NY. Fast prescriptions, vaccines, OTC essentials, and free local delivery." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0f172a;        /* slate-900 */
-      --card:#111827;      /* gray-900 */
-      --ink:#e5e7eb;       /* gray-200 */
-      --muted:#9ca3af;     /* gray-400 */
-      --accent:#22c55e;    /* green-500 */
-      --accent-2:#14b8a6;  /* teal-500 */
+      --green:#16a34a; /* primary */
+      --green-2:#0ea5e9; /* accent */
+      --ink:#1f2937;    /* gray-800 */
+      --muted:#6b7280;  /* gray-500 */
+      --bg:#ffffff;
+      --soft:#f8fafc;   /* slate-50 */
     }
     *{box-sizing:border-box}
-    html,body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-    a{color:var(--accent);text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;background:rgba(15,23,42,.8);backdrop-filter: blur(8px);z-index:10;border-bottom:1px solid #1f2937}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
-    .brand .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:800;color:#001b12}
-    .navlinks a{margin-left:18px;color:var(--ink);opacity:.9}
-    .navlinks a:hover{opacity:1}
+    html,body{margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--green);text-decoration:none}
+    .container{max-width:1180px;margin:0 auto;padding:0 20px}
 
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:56px 0}
-    .card{background:var(--card);border:1px solid #1f2937;border-radius:16px}
-    .card.pad{padding:24px}
-    .kicker{color:var(--accent);font-weight:700;letter-spacing:.25px}
-    .h1{font-size:38px;line-height:1.12;margin:10px 0 8px}
-    .lead{color:var(--muted);font-size:17px}
-    .btns{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid #1f2937;background:#0b1222;color:var(--ink);font-weight:600}
-    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#012217;border:none}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#0b1222;border:1px solid #1f2937;color:var(--muted);font-size:12px}
+    /* Header */
+    header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e5e7eb}
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:14px;color:var(--muted)}
+    .topbar a{color:var(--muted)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--green),#22c55e);display:grid;place-items:center;color:white;font-weight:700}
+    .navlinks a{margin-left:18px;font-weight:600;color:var(--ink)}
+    .cta{padding:10px 14px;border-radius:10px;background:var(--green);color:#fff;font-weight:700}
 
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .grid .tile{padding:20px}
-    .tile h3{margin:0 0 6px;font-size:18px}
-    .tile p{margin:0;color:var(--muted);font-size:14px}
+    /* Hero */
+    .hero{position:relative;background:linear-gradient(100deg,#d1fae5, #e0f2fe);}
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:54px 0}
+    .h1{font-size:44px;line-height:1.1;margin:0 0 10px}
+    .lead{color:var(--muted);font-size:18px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .badge{padding:8px 12px;border-radius:999px;background:#fff;border:1px solid #e5e7eb;color:var(--muted);font-size:13px}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 10px 20px rgba(2,6,23,.06)}
+    .card.pad{padding:22px}
 
-    section{padding:42px 0}
-    h2{font-size:26px;margin:0 0 12px}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
-    .list li{display:flex;gap:10px;align-items:flex-start}
-    .list li span{color:var(--muted)}
+    /* Section */
+    section{padding:54px 0}
+    h2{font-size:28px;margin:0 0 10px}
+    .sub{color:var(--muted);margin:0 0 18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .tile{padding:20px}
+    .tile h3{margin:0 0 6px}
+    .tile p{margin:0;color:var(--muted)}
 
-    .hours{display:grid;grid-template-columns:1fr auto;gap:8px;color:var(--muted)}
+    /* Services icons */
+    .icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:#ecfeff;border:1px solid #bae6fd;margin-bottom:10px}
 
-    footer{padding:28px 0;border-top:1px solid #1f2937;color:#9aa1af}
-
-    .notice{font-size:12px;color:#9aa1af}
+    /* Footer */
+    footer{background:var(--soft);border-top:1px solid #e5e7eb;padding:28px 0;color:var(--muted)}
 
     /* Responsive */
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr}
-      .two{grid-template-columns:1fr}
+    @media (max-width: 980px){
+      .hero-inner{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
       .navlinks{display:none}
     }
   </style>
-  <script>
-    // Smooth scroll for anchor links
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-          const id = a.getAttribute('href');
-          if(id.length > 1){
-            e.preventDefault();
-            document.querySelector(id)?.scrollIntoView({behavior:'smooth'});
-          }
-        });
-      });
-    });
-  </script>
-  <!-- SEO: Local Business Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Pharmacy",
-    "name": "Raees Pharmacy",
-    "image": "",
-    "telephone": "+1-718-856-5998",
-    "email": "raeespharmacy@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "750 Flatbush Ave",
-      "addressLocality": "Brooklyn",
-      "addressRegion": "NY",
-      "postalCode": "11226",
-      "addressCountry": "US"
-    },
-    "url": "https://yourusername.github.io/raees-pharmacy/",
-    "openingHours": ["Mo-Fr 09:00-19:00","Sa 10:00-16:00"],
-    "paymentAccepted": "Cash, Credit Card, Debit Card",
-    "priceRange": "$"
-  }
-  </script>
 </head>
 <body>
   <header>
+    <div class="container topbar">
+      <div>📍 750 Flatbush Ave, Brooklyn, NY 11226</div>
+      <div>☎️ <a href="tel:+17188565998">718‑856‑5998</a> • ✉️ <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></div>
+    </div>
     <div class="container">
       <nav>
         <div class="brand">
           <div class="logo">Rx</div>
-          <div>Raees Pharmacy</div>
+          <strong>Raees Pharmacy</strong>
         </div>
         <div class="navlinks">
           <a href="#services">Services</a>
-          <a href="#refills">Refills</a>
+          <a href="#refill">Refill</a>
           <a href="#insurance">Insurance</a>
           <a href="#contact">Contact</a>
         </div>
+        <a class="cta" href="tel:+17188565998">Call Now</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <div class="container hero">
+  <section class="hero">
+    <div class="container hero-inner">
       <div>
-        <div class="kicker">Brooklyn’s neighborhood pharmacy</div>
-        <h1 class="h1">Fast prescriptions, caring service.</h1>
-        <p class="lead">Pick‑up and delivery, vaccines, OTC essentials, and personalized medication counseling at 750 Flatbush Ave, Brooklyn, NY 11226.</p>
-        <div class="btns">
-          <a class="btn primary" href="tel:+17188565998">Call 718‑856‑5998</a>
-          <a class="btn" href="mailto:raeespharmacy@gmail.com?subject=Prescription%20Question">Email us</a>
-          <a class="btn" href="#refills">Request a Refill</a>
+        <h1 class="h1">Your Family’s <span style="color:var(--green)">Trusted Pharmacy</span></h1>
+        <p class="lead">Fast, friendly service for prescriptions, vaccines, and everyday health needs. Free local delivery available.</p>
+        <div class="badges">
+          <span class="badge">Same‑day refills</span>
+          <span class="badge">Immunizations</span>
+          <span class="badge">Medication packaging</span>
         </div>
-        <div class="badge" style="margin-top:14px">Most prescriptions ready in minutes*</div>
+        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="cta" href="#refill">Request Refill</a>
+          <a class="cta" style="background:#0ea5e9" href="mailto:raeespharmacy@gmail.com?subject=Transfer%20Prescription">Transfer Rx</a>
+        </div>
       </div>
       <div class="card pad">
-        <h3 style="margin-top:0">Today’s Info</h3>
-        <div class="grid">
-          <div class="tile card">
-            <h3>Hours</h3>
-            <div class="hours">
-              <div>Mon–Fri</div><div>9:00 AM – 7:00 PM</div>
-              <div>Saturday</div><div>10:00 AM – 4:00 PM</div>
-              <div>Sunday</div><div>Closed</div>
-            </div>
+        <h3 style="margin-top:0">Today’s Hours</h3>
+        <div class="grid-2">
+          <div class="tile" style="padding-left:0">
+            <p><strong>Mon–Fri:</strong> 9:00 AM – 7:00 PM<br>
+            <strong>Saturday:</strong> 10:00 AM – 4:00 PM<br>
+            <strong>Sunday:</strong> Closed</p>
+            <p style="margin-top:8px"><a href="https://maps.google.com/?q=750+Flatbush+Ave+Brooklyn+NY+11226" target="_blank" rel="noopener">Open in Google Maps</a></p>
           </div>
-          <div class="tile card">
-            <h3>Address</h3>
-            <p>750 Flatbush Ave<br/>Brooklyn, NY 11226</p>
-            <p><a target="_blank" rel="noopener" href="https://maps.google.com/?q=750%20Flatbush%20Ave%2C%20Brooklyn%20NY%2011226">Open in Maps</a></p>
-          </div>
-          <div class="tile card">
-            <h3>Services Today</h3>
-            <p>Flu shots • Rapid refills • Free local delivery</p>
+          <div class="tile card" style="background:#f0fdf4;border:1px dashed #86efac">
+            <h3 style="margin-top:0">Free Delivery</h3>
+            <p class="sub">Call before 3 PM for same‑day (zone based).</p>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <section id="services">
-      <div class="container">
-        <h2>Our Services</h2>
-        <div class="two">
-          <div class="card pad">
-            <ul class="list">
-              <li>💊 <span>Prescription filling & synchronization</span></li>
-              <li>🚚 <span>Free local delivery (ask for zones)</span></li>
-              <li>🛡️ <span>Immunizations: Flu, COVID‑19, and more</span></li>
-              <li>🧪 <span>Point‑of‑care testing (availability varies)</span></li>
-              <li>📦 <span>Medication packaging (pill packs/blister)</span></li>
-              <li>🤝 <span>Prior authorizations & insurance help</span></li>
-              <li>🍼 <span>Pediatric & OTC essentials</span></li>
-            </ul>
-          </div>
-          <div class="card pad">
-            <h3 style="margin-top:0">Transfer Your Prescription</h3>
-            <p class="lead">We’ll move your prescriptions in minutes. Provide your current pharmacy info and the medications to transfer.</p>
-            <div class="btns">
-              <a class="btn primary" href="mailto:raeespharmacy@gmail.com?subject=Rx%20Transfer&body=Name:%0D%0ADate%20of%20Birth:%0D%0APhone:%0D%0AAddress:%0D%0A%0D%0ACurrent%20Pharmacy%20Name:%0D%0ACurrent%20Pharmacy%20Phone:%0D%0AMedications%20to%20Transfer:%0D%0AAllergies:%0D%0A">Start Transfer via Email</a>
-              <a class="btn" href="tel:+17188565998">Call to Transfer</a>
-            </div>
-          </div>
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="sub">Everything you expect from a full‑service community pharmacy.</p>
+      <div class="grid-3">
+        <div class="card pad">
+          <div class="icon">💊</div>
+          <h3>Prescriptions</h3>
+          <p>Fast fills, automatic refills, and medication sync.</p>
+        </div>
+        <div class="card pad">
+          <div class="icon">🛡️</div>
+          <h3>Immunizations</h3>
+          <p>Flu, COVID‑19, shingles, and more (walk‑in welcome).</p>
+        </div>
+        <div class="card pad">
+          <div class="icon">📦</div>
+          <h3>Pill Packs</h3>
+          <p>Weekly/monthly blister packs for easy, safe dosing.</p>
+        </div>
+        <div class="card pad">
+          <div class="icon">🧾</div>
+          <h3>Prior Auth Help</h3>
+          <p>We work with your prescriber and plan to resolve issues.</p>
+        </div>
+        <div class="card pad">
+          <div class="icon">🍼</div>
+          <h3>OTC Essentials</h3>
+          <p>Vitamins, pediatrics, first‑aid, and personal care.</p>
+        </div>
+        <div class="card pad">
+          <div class="icon">🚚</div>
+          <h3>Free Delivery</h3>
+          <p>Local delivery available—ask for zones & cutoff time.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="refills">
-      <div class="container">
-        <h2>Refills & Requests</h2>
-        <div class="two">
-          <div class="card pad">
-            <h3 style="margin-top:0">Quick Refill</h3>
-            <p>Send us your prescription number(s) and name. We’ll text or call when it’s ready.</p>
-            <p>
-              <a class="btn primary" href="mailto:raeespharmacy@gmail.com?subject=Quick%20Refill&body=Name:%0D%0ADate%20of%20Birth:%0D%0APhone:%0D%0ARx%20Numbers:%0D%0APickup%20or%20Delivery?:%0D%0A">Email Refill</a>
-              <a class="btn" href="sms:+17188565998">Text Us</a>
-            </p>
-            <p class="notice">*Do not include sensitive medical details via email. We’ll verify by phone if needed.</p>
-          </div>
-          <div class="card pad">
-            <h3 style="margin-top:0">Delivery</h3>
-            <p>We offer free local delivery within select areas. Ask our team for today’s cutoff time.</p>
-          </div>
+  <section id="refill" style="background:var(--soft)">
+    <div class="container">
+      <h2>Quick Refill</h2>
+      <p class="sub">Send your details— we’ll text or call when it’s ready.</p>
+      <div class="grid-2">
+        <div class="card pad">
+          <h3 style="margin-top:0">Email Refill</h3>
+          <p><a class="cta" href="mailto:raeespharmacy@gmail.com?subject=Quick%20Refill&body=Name:%0D%0ADOB:%0D%0APhone:%0D%0ARx%20Numbers:%0D%0APickup%20or%20Delivery?:">Open Email</a></p>
+          <p class="sub">Do not include sensitive medical info by email.</p>
+        </div>
+        <div class="card pad">
+          <h3 style="margin-top:0">Text or Call</h3>
+          <p><a class="cta" style="background:#111827" href="sms:+17188565998">Text 718‑856‑5998</a>
+             <a class="cta" href="tel:+17188565998" style="margin-left:10px">Call</a></p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="insurance">
-      <div class="container">
-        <h2>Insurance & Payments</h2>
-        <div class="two">
-          <div class="card pad">
-            <p class="lead">We accept most major insurance plans. Bring your card and a valid ID.</p>
-            <ul class="list">
-              <li>💳 <span>Cash, HSA/FSA, debit, and credit accepted</span></li>
-              <li>📇 <span>Most commercial plans & Medicare Part D</span></li>
-              <li>🏥 <span>We help resolve plan rejections & PA</span></li>
-            </ul>
-          </div>
-          <div class="card pad">
-            <h3 style="margin-top:0">Save on Rx</h3>
-            <p>Ask about generic options and discount programs to lower your copay.</p>
-          </div>
+  <section id="insurance">
+    <div class="container">
+      <h2>Insurance & Payments</h2>
+      <div class="grid-2">
+        <div class="card pad">
+          <p class="sub">We accept most major plans. Bring your card and a valid ID.</p>
+          <ul>
+            <li>Medicare Part D & Medicaid Managed Care</li>
+            <li>Most commercial plans</li>
+            <li>HSA/FSA, cash, debit, and credit</li>
+          </ul>
+        </div>
+        <div class="card pad">
+          <h3 style="margin-top:0">Save on Rx</h3>
+          <p>Ask for generics and discount options to lower copays.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
-      <div class="container">
-        <h2>Find Us</h2>
-        <div class="two">
-          <div class="card pad">
-            <p><strong>Raees Pharmacy</strong><br/>750 Flatbush Ave, Brooklyn, NY 11226<br/>Phone: <a href="tel:+17188565998">718‑856‑5998</a><br/>Email: <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></p>
-            <p class="notice">For medical emergencies, call 911. For prescription issues, please call the pharmacy directly.</p>
-          </div>
-          <div class="card pad" style="overflow:hidden">
-            <iframe title="Map to Raees Pharmacy" width="100%" height="280" style="border:0;border-radius:12px" loading="lazy" allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=750%20Flatbush%20Ave%2C%20Brooklyn%2C%20NY%2011226&output=embed"></iframe>
-          </div>
+  <section id="contact" style="background:var(--soft)">
+    <div class="container">
+      <h2>Contact & Location</h2>
+      <div class="grid-2">
+        <div class="card pad">
+          <p><strong>Raees Pharmacy</strong><br>750 Flatbush Ave, Brooklyn, NY 11226</p>
+          <p>Phone: <a href="tel:+17188565998">718‑856‑5998</a><br>Email: <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></p>
+          <p class="sub">For emergencies call 911. For prescription questions, call us directly.</p>
+        </div>
+        <div class="card" style="overflow:hidden">
+          <iframe title="Map to Raees Pharmacy" width="100%" height="300" style="border:0;border-radius:16px" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=750%20Flatbush%20Ave%2C%20Brooklyn%2C%20NY%2011226&output=embed"></iframe>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    <div class="container">
-      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <div>© <span id="year"></span> Raees Pharmacy. All rights reserved.</div>
-        <div class="notice">HIPAA Notice: We protect your privacy. We never share personal health info without consent.</div>
-      </div>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Raees Pharmacy</div>
+      <div>HIPAA: We protect your privacy and never share health info without consent.</div>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
