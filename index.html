@@ -27,10 +27,11 @@
     header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e5e7eb}
     .topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:14px;color:var(--muted)}
     .topbar a{color:var(--muted)}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand img{height:50px}
-    .navlinks a{margin-left:18px;font-weight:600;color:var(--ink)}
-    .cta{padding:10px 14px;border-radius:10px;background:var(--green);color:#fff;font-weight:700}
+    nav{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 0}
+    .brand img{height:140px;max-width:100%;object-fit:contain}
+    .navlinks{margin-top:12px}
+    .navlinks a{margin:0 12px;font-weight:600;color:var(--ink)}
+    .cta{padding:10px 14px;border-radius:10px;background:var(--green);color:#fff;font-weight:700;margin-left:12px}
 
     /* Hero */
     .hero{position:relative;background:linear-gradient(100deg,#d1fae5, #e0f2fe);}
@@ -63,7 +64,6 @@
       .hero-inner{grid-template-columns:1fr}
       .grid-3{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
-      .navlinks{display:none}
     }
   </style>
 </head>
@@ -71,7 +71,7 @@
   <header>
     <div class="container topbar">
       <div>📍 750 Flatbush Ave, Brooklyn, NY 11226</div>
-      <div>☎️ <a href="tel:+17188565998">718‑856‑5998</a> • ✉️ <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a> • 📠 Fax: 718‑856‑5029</div>
+      <div>☎️ <a href="tel:+17188565998">718-856-5998</a> • ✉️ <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a> • 📠 Fax: 718-856-5029</div>
     </div>
     <div class="container">
       <nav>
@@ -83,8 +83,8 @@
           <a href="#refill">Refill</a>
           <a href="#insurance">Insurance</a>
           <a href="#contact">Contact</a>
+          <a class="cta" href="tel:+17188565998">Call Now</a>
         </div>
-        <a class="cta" href="tel:+17188565998">Call Now</a>
       </nav>
     </div>
   </header>
@@ -95,7 +95,7 @@
         <h1 class="h1">Your Family’s <span style="color:var(--green)">Trusted Pharmacy</span></h1>
         <p class="lead">Fast, friendly service for prescriptions, vaccines, and everyday health needs. Free local delivery available.</p>
         <div class="badges">
-          <span class="badge">Same‑day refills</span>
+          <span class="badge">Same-day refills</span>
           <span class="badge">Immunizations</span>
           <span class="badge">Medication packaging</span>
         </div>
@@ -115,7 +115,7 @@
           </div>
           <div class="tile card" style="background:#f0fdf4;border:1px dashed #86efac">
             <h3 style="margin-top:0">Free Delivery</h3>
-            <p class="sub">Call before 5 PM for next‑day delivery (zone based).</p>
+            <p class="sub">Call before 5 PM for next-day delivery (zone based).</p>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
   <section id="services">
     <div class="container">
       <h2>Services</h2>
-      <p class="sub">Everything you expect from a full‑service community pharmacy.</p>
+      <p class="sub">Everything you expect from a full-service community pharmacy.</p>
       <div class="grid-3">
         <div class="card pad">
           <div class="icon">💊</div>
@@ -135,7 +135,7 @@
         <div class="card pad">
           <div class="icon">🛡️</div>
           <h3>Immunizations</h3>
-          <p>Flu, COVID‑19, shingles, and more (walk‑in welcome).</p>
+          <p>Flu, COVID-19, shingles, and more (walk-in welcome).</p>
         </div>
         <div class="card pad">
           <div class="icon">📦</div>
@@ -150,7 +150,7 @@
         <div class="card pad">
           <div class="icon">🍼</div>
           <h3>OTC Essentials</h3>
-          <p>Vitamins, pediatrics, first‑aid, and personal care.</p>
+          <p>Vitamins, pediatrics, first-aid, and personal care.</p>
         </div>
         <div class="card pad">
           <div class="icon">🚚</div>
@@ -167,7 +167,7 @@
       <p class="sub">For refills please call us directly. No text requests are accepted.</p>
       <div class="card pad">
         <h3 style="margin-top:0">Call for Refill</h3>
-        <p><a class="cta" href="tel:+17188565998">Call 718‑856‑5998</a></p>
+        <p><a class="cta" href="tel:+17188565998">Call 718-856-5998</a></p>
         <p class="sub">Phone refills only • No texting</p>
       </div>
     </div>
@@ -199,7 +199,7 @@
       <div class="grid-2">
         <div class="card pad">
           <p><strong>Raees Pharmacy</strong><br>750 Flatbush Ave, Brooklyn, NY 11226</p>
-          <p>Phone: <a href="tel:+17188565998">718‑856‑5998</a><br>Fax: 718‑856‑5029<br>Email: <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></p>
+          <p>Phone: <a href="tel:+17188565998">718-856-5998</a><br>Fax: 718-856-5029<br>Email: <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></p>
           <p class="sub">For emergencies call 911. For prescription questions, call us directly.</p>
         </div>
         <div class="card" style="overflow:hidden">
