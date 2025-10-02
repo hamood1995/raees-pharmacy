@@ -204,15 +204,20 @@
     const activeChip = document.querySelector('.chip.active');
     const cat = activeChip ? activeChip.dataset.value : 'all';
 
-    // Filter
-    VIEW = ALL.filter(p=>{
-      // hide OOS (set to false to show all)
-      if(p.qty && Number(p.qty) <= 0) return false;
+  // Filter (show EVERYTHING, even if qty <= 0) and normalize empty category to "Other"
+VIEW = ALL
+  .map(p => ({ ...p, category: (p.category && p.category.trim()) ? p.category : 'Other' }))
+  .filter(p => {
+    const hitSearch =
+      !q ||
+      norm(p.name).includes(q) ||
+      norm(p.sku).includes(q) ||
+      norm(p.category).includes(q);
 
-      const hitSearch = !q || norm(p.name).includes(q) || norm(p.sku).includes(q) || norm(p.category).includes(q);
-      const hitCat = (cat === 'all') || (norm(p.category) === norm(cat));
-      return hitSearch && hitCat;
-    });
+    const hitCat = (cat === 'all') || (norm(p.category) === norm(cat));
+    return hitSearch && hitCat;
+  });
+
 
     // Pagination
     const total = VIEW.length;
