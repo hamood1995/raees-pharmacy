@@ -11,12 +11,12 @@
 
   <style>
     :root{
-      --green:#16a34a; /* primary */
-      --blue:#0ea5e9;  /* accent */
-      --ink:#1f2937;   /* gray-800 */
-      --muted:#6b7280;/* gray-500 */
+      --green:#16a34a;
+      --blue:#0ea5e9;
+      --ink:#1f2937;
+      --muted:#6b7280;
       --bg:#ffffff;
-      --soft:#f8fafc; /* slate-50 */
+      --soft:#f8fafc;
       --border:#e5e7eb;
     }
     *{box-sizing:border-box}
@@ -26,8 +26,6 @@
 
     /* Header */
     header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--border)}
-    .topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:14px;color:var(--muted)}
-    .topbar a{color:var(--muted)}
     nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px}
     .brand img{height:46px}
@@ -77,12 +75,8 @@
 </head>
 <body>
 
-  <!-- Top info strip -->
+  <!-- HEADER -->
   <header>
-    <div class="container topbar">
-      <div>📍 750 Flatbush Ave, Brooklyn, NY 11226</div>
-      <div>☎️ <a href="tel:+17188565998">718-856-5998</a> • 📠 Fax: 718-856-5029 • ✉️ <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></div>
-    </div>
     <div class="container">
       <nav>
         <div class="brand">
@@ -91,7 +85,6 @@
         </div>
         <div class="navlinks">
           <a href="#services">Services</a>
-          <a href="/shop">Shop</a>
           <a href="#hours">Hours</a>
           <a href="#contact">Contact</a>
         </div>
@@ -111,25 +104,13 @@
           <span class="badge">Immunizations</span>
           <span class="badge">Medication sync</span>
         </div>
-        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="cta" href="/shop">Shop OTC</a>
-          <a class="cta" style="background:var(--blue)" href="mailto:raeespharmacy@gmail.com?subject=Transfer%20Prescription">Transfer Rx</a>
-        </div>
       </div>
       <div class="card pad" id="hours">
         <h3 style="margin-top:0">Today’s Hours</h3>
-        <div class="grid-2">
-          <div style="padding-right:10px">
-            <p><strong>Mon–Fri:</strong> 10:00 AM – 6:00 PM<br>
-            <strong>Saturday:</strong> 10:00 AM – 5:00 PM<br>
-            <strong>Sunday:</strong> Closed</p>
-            <p style="margin-top:8px"><a href="https://maps.google.com/?q=750+Flatbush+Ave+Brooklyn+NY+11226" target="_blank" rel="noopener">Open in Google Maps</a></p>
-          </div>
-          <div class="card" style="background:#f0fdf4;border:1px dashed #86efac;padding:14px;border-radius:12px">
-            <h3 style="margin:0 0 6px">Delivery</h3>
-            <p class="sub" style="margin:0">Call before 5 PM for **next-day** delivery (zone-based).</p>
-          </div>
-        </div>
+        <p><strong>Mon–Fri:</strong> 10:00 AM – 6:00 PM<br>
+        <strong>Saturday:</strong> 10:00 AM – 5:00 PM<br>
+        <strong>Sunday:</strong> Closed</p>
+        <p><a href="https://maps.google.com/?q=750+Flatbush+Ave+Brooklyn+NY+11226" target="_blank" rel="noopener">📍 View on Google Maps</a></p>
       </div>
     </div>
   </section>
@@ -141,119 +122,22 @@
       <p class="sub">Everything you expect from a full-service community pharmacy — and more.</p>
 
       <div class="grid-3">
-        <!-- Row 1 -->
-        <div class="card svc">
-          <div class="ico">👨‍⚕️</div>
-          <div>
-            <h3>Patient Counseling</h3>
-            <p>Personalized guidance on medications, side effects, and best practices for better outcomes.</p>
-          </div>
-        </div>
-
-        <div class="card svc">
-          <div class="ico">🕒</div>
-          <div>
-            <h3>Med Synchronization</h3>
-            <p>Pick up all your meds on one convenient day each month — fewer trips, fewer hassles.</p>
-          </div>
-        </div>
-
-        <div class="card svc">
-          <div class="ico">💉</div>
-          <div>
-            <h3>Vaccinations</h3>
-            <p>Flu, COVID-19, shingles, and more. Walk-ins welcome or call to schedule.</p>
-          </div>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="card svc">
-          <div class="ico">🏪</div>
-          <div>
-            <h3>One-Stop Health Store</h3>
-            <p>OTC essentials, vitamins, household items — your wellness spot in one location.</p>
-          </div>
-        </div>
-
-        <div class="card svc">
-          <div class="ico">💳</div>
-          <div>
-            <h3>OTC Network</h3>
-            <p>We accept many OTC benefit cards to help you purchase eligible health items easily.</p>
-          </div>
-        </div>
-
-        <div class="card svc">
-          <div class="ico">🔁</div>
-          <div>
-            <h3>Placid Money Transfer</h3>
-            <p>Send money securely with Placid. Competitive rates and quick transfers.</p>
-          </div>
-        </div>
-
-        <!-- Row 3 -->
-        <div class="card svc">
-          <div class="ico">📱</div>
-          <div>
-            <h3>Phone Bill Pay</h3>
-            <p>Top-up & pay mobile bills (Lycamobile, Ultra, Simple Mobile, and more) — fast and simple.</p>
-          </div>
-        </div>
-
-        <div class="card svc">
-          <div class="ico">👁️</div>
-          <div>
-            <h3>DMV Vision Test</h3>
-            <p>Quick and convenient DMV vision screening to help you renew your license.</p>
-          </div>
-        </div>
-
-        <div class="card svc">
-          <div class="ico">🕋</div>
-          <div>
-            <h3>Halal Vitamins</h3>
-            <p>A curated selection of high-quality halal vitamins and supplements.</p>
-          </div>
-        </div>
-
-        <!-- Row 4 -->
-        <div class="card svc">
-          <div class="ico">🛒</div>
-          <div>
-            <h3>Grocery Basics</h3>
-            <p>Everyday essentials and snacks — grab what you need while you pick up your prescriptions.</p>
-          </div>
-        </div>
-
-        <div class="card svc">
-          <div class="ico">📠</div>
-          <div>
-            <h3>Fax & Printing</h3>
-            <p>Quick faxing and document printing available in store.</p>
-          </div>
-        </div>
-
-        <div class="card svc">
-          <div class="ico">🧾</div>
-          <div>
-            <h3>Insurance Representative</h3>
-            <p>Help reviewing plans and understanding coverage. Bring your card and ID.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA row -->
-      <div class="card pad" style="margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-        <div><strong>Need something today?</strong> Call us or browse our OTC catalog.</div>
-        <div style="display:flex;gap:10px">
-          <a class="cta" href="tel:+17188565998">Call 718-856-5998</a>
-          <a class="cta" style="background:var(--blue)" href="/shop">Open Shop</a>
-        </div>
+        <div class="card svc"><div class="ico">👨‍⚕️</div><div><h3>Patient Counseling</h3><p>Guidance on medications, side effects, and therapy for better outcomes.</p></div></div>
+        <div class="card svc"><div class="ico">🕒</div><div><h3>Med Synchronization</h3><p>Pick up all meds on one day each month — fewer trips, fewer hassles.</p></div></div>
+        <div class="card svc"><div class="ico">💉</div><div><h3>Vaccinations</h3><p>Flu, COVID-19, shingles, and more. Walk-ins welcome.</p></div></div>
+        <div class="card svc"><div class="ico">🏪</div><div><h3>One-Stop Health Store</h3><p>OTC essentials, vitamins, household items, and more.</p></div></div>
+        <div class="card svc"><div class="ico">💳</div><div><h3>OTC Network</h3><p>We accept many OTC benefit cards for health items.</p></div></div>
+        <div class="card svc"><div class="ico">🔁</div><div><h3>Placid Money Transfer</h3><p>Send money securely with Placid at great rates.</p></div></div>
+        <div class="card svc"><div class="ico">📱</div><div><h3>Phone Bill Pay</h3><p>Recharge or pay your mobile bills quickly in-store.</p></div></div>
+        <div class="card svc"><div class="ico">👁️</div><div><h3>DMV Vision Test</h3><p>Get your DMV eye test quickly — no appointment needed.</p></div></div>
+        <div class="card svc"><div class="ico">🕋</div><div><h3>Halal Vitamins</h3><p>High-quality halal-certified vitamins and supplements.</p></div></div>
+        <div class="card svc"><div class="ico">📠</div><div><h3>Fax & Printing</h3><p>Convenient document fax and print services.</p></div></div>
+        <div class="card svc"><div class="ico">🧾</div><div><h3>Insurance Representative</h3><p>We’ll help review plans and coverage options.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT & MAP -->
+  <!-- CONTACT -->
   <section id="contact" style="background:var(--soft)">
     <div class="container">
       <h2>Contact & Location</h2>
@@ -263,11 +147,9 @@
           <p>Phone: <a href="tel:+17188565998">718-856-5998</a><br>
              Fax: 718-856-5029<br>
              Email: <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></p>
-          <p class="sub">For emergencies call 911. For prescription questions, call us directly.</p>
         </div>
         <div class="card" style="overflow:hidden">
           <iframe title="Map to Raees Pharmacy" width="100%" height="300" style="border:0;border-radius:16px" loading="lazy" allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=750%20Flatbush%20Ave%2C%20Brooklyn%2C%20NY%2011226&output=embed"></iframe>
         </div>
       </div>
@@ -281,8 +163,8 @@
     </div>
   </footer>
 
-  <!-- WhatsApp (optional) -->
-  <a class="wa-btn" href="https://wa.me/17188565998" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬 WhatsApp us</a>
+  <!-- WhatsApp -->
+  <a class="wa-btn" href="https://wa.me/17188565998" target="_blank" rel="noopener">💬 WhatsApp us</a>
 
   <script>
     document.getElementById('year').textContent=new Date().getFullYear();
