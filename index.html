@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Raees Pharmacy • Brooklyn, NY</title>
   <meta name="description" content="Neighborhood pharmacy in Brooklyn, NY. Fast prescriptions, vaccines, OTC essentials, and free local delivery." />
-  <link rel="icon" type="image/png" href="Raeeslogo_blue.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --green:#16a34a; /* primary */
-      --accent:#0ea5e9; /* accent */
-      --ink:#1f2937;    /* gray-800 */
-      --muted:#6b7280;  /* gray-500 */
+      --blue:#0ea5e9;  /* accent */
+      --ink:#1f2937;   /* gray-800 */
+      --muted:#6b7280;/* gray-500 */
       --bg:#ffffff;
-      --soft:#f8fafc;   /* slate-50 */
+      --soft:#f8fafc; /* slate-50 */
       --border:#e5e7eb;
     }
     *{box-sizing:border-box}
@@ -26,26 +26,17 @@
 
     /* Header */
     header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--border)}
-    .topbar{display:flex;justify-content:flex-end;align-items:center;padding:8px 0;font-size:14px;color:var(--muted)}
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:14px;color:var(--muted)}
     .topbar a{color:var(--muted)}
-
-    nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:90px;max-width:100%;object-fit:contain}
-    .nav-right{display:flex;align-items:center;gap:16px}
-    .navlinks{display:flex;gap:18px;align-items:center}
-    .navlinks a{font-weight:600;color:var(--ink)}
+    .brand img{height:46px}
+    .navlinks a{margin-left:18px;font-weight:600;color:var(--ink)}
     .cta{padding:10px 14px;border-radius:10px;background:var(--green);color:#fff;font-weight:700}
-    .menu-toggle{display:none;background:none;border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-size:22px;line-height:1}
-
-    /* Mobile menu drawer */
-    .mobile-menu{display:none;border-top:1px solid var(--border);padding:10px 0}
-    .mobile-menu a{display:block;padding:10px 0;border-bottom:1px dashed var(--border);color:var(--ink);font-weight:600}
-    .mobile-menu .cta{display:inline-block;margin-top:8px}
 
     /* Hero */
-    .hero{position:relative;background:linear-gradient(100deg,#d1fae5, #e0f2fe)}
-    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:56px 0}
+    .hero{position:relative;background:linear-gradient(100deg,#d1fae5, #e0f2fe);}
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:54px 0}
     .h1{font-size:44px;line-height:1.1;margin:0 0 10px}
     .lead{color:var(--muted);font-size:18px}
     .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
@@ -59,63 +50,53 @@
     .sub{color:var(--muted);margin:0 0 18px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .tile{padding:20px}
-    .tile h3{margin:0 0 6px}
-    .tile p{margin:0;color:var(--muted)}
-    .icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:#ecfeff;border:1px solid #bae6fd;margin-bottom:10px}
 
-    /* Reviews iframe card */
-    .map-card{overflow:hidden}
-    .map-card iframe{border:0;border-radius:16px;width:100%;height:360px}
+    /* Services */
+    .svc{padding:18px;display:flex;gap:14px;align-items:flex-start}
+    .svc .ico{flex:0 0 44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#ecfeff;border:1px solid #bae6fd;font-size:22px}
+    .svc h3{margin:0 0 6px;font-size:16px}
+    .svc p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
 
     /* Footer */
     footer{background:var(--soft);border-top:1px solid var(--border);padding:28px 0;color:var(--muted)}
+
+    /* Floating WhatsApp */
+    .wa-btn{
+      position:fixed;right:16px;bottom:16px;background:#25D366;color:#fff;
+      padding:12px 16px;border-radius:999px;font-weight:700;box-shadow:0 10px 18px rgba(0,0,0,.12)
+    }
 
     /* Responsive */
     @media (max-width: 980px){
       .hero-inner{grid-template-columns:1fr}
       .grid-3{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
-    }
-    @media (max-width: 768px){
-      .brand img{height:64px}
       .navlinks{display:none}
-      .menu-toggle{display:block}
-      .nav-right{gap:10px}
     }
   </style>
 </head>
 <body>
+
+  <!-- Top info strip -->
   <header>
     <div class="container topbar">
-      ☎️ <a href="tel:+17188565998">718-856-5998</a>
+      <div>📍 750 Flatbush Ave, Brooklyn, NY 11226</div>
+      <div>☎️ <a href="tel:+17188565998">718-856-5998</a> • 📠 Fax: 718-856-5029 • ✉️ <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></div>
     </div>
     <div class="container">
       <nav>
         <div class="brand">
-          <img src="Raeeslogo_blue.png" alt="Raees Pharmacy Logo">
+          <img src="/Raeeslogo_blue.png" alt="Raees Pharmacy Logo" />
+          <strong>Raees Pharmacy</strong>
         </div>
-        <div class="nav-right">
-          <div class="navlinks" id="navlinks">
-            <a href="#services">Services</a>
-            <a href="#refill">Refill</a>
-            <a href="#insurance">Insurance</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
-            <a href="/shop">Shop</a>
-          </div>
-          <a class="cta" href="tel:+17188565998">Call Now</a>
-          <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="navlinks">
+          <a href="#services">Services</a>
+          <a href="/shop">Shop</a>
+          <a href="#hours">Hours</a>
+          <a href="#contact">Contact</a>
         </div>
-      </nav>
-      <div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-        <a href="#services">Services</a>
-        <a href="#refill">Refill</a>
-        <a href="#insurance">Insurance</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
         <a class="cta" href="tel:+17188565998">Call Now</a>
-      </div>
+      </nav>
     </div>
   </header>
 
@@ -126,27 +107,27 @@
         <h1 class="h1">Your Family’s <span style="color:var(--green)">Trusted Pharmacy</span></h1>
         <p class="lead">Fast, friendly service for prescriptions, vaccines, and everyday health needs. Free local delivery available.</p>
         <div class="badges">
-          <span class="badge">Same‑day refills</span>
+          <span class="badge">Same-day refills</span>
           <span class="badge">Immunizations</span>
-          <span class="badge">Medication packaging</span>
+          <span class="badge">Medication sync</span>
         </div>
         <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="cta" href="#refill">Request Refill</a>
-          <a class="cta" style="background:var(--accent)" href="mailto:raeespharmacy@gmail.com?subject=Transfer%20Prescription">Transfer Rx</a>
+          <a class="cta" href="/shop">Shop OTC</a>
+          <a class="cta" style="background:var(--blue)" href="mailto:raeespharmacy@gmail.com?subject=Transfer%20Prescription">Transfer Rx</a>
         </div>
       </div>
-      <div class="card pad">
+      <div class="card pad" id="hours">
         <h3 style="margin-top:0">Today’s Hours</h3>
         <div class="grid-2">
-          <div class="tile" style="padding-left:0">
+          <div style="padding-right:10px">
             <p><strong>Mon–Fri:</strong> 10:00 AM – 6:00 PM<br>
             <strong>Saturday:</strong> 10:00 AM – 5:00 PM<br>
             <strong>Sunday:</strong> Closed</p>
             <p style="margin-top:8px"><a href="https://maps.google.com/?q=750+Flatbush+Ave+Brooklyn+NY+11226" target="_blank" rel="noopener">Open in Google Maps</a></p>
           </div>
-          <div class="tile card" style="background:#f0fdf4;border:1px dashed #86efac">
-            <h3 style="margin-top:0">Free Delivery</h3>
-            <p class="sub">Call before 5 PM for next‑day delivery (zone based).</p>
+          <div class="card" style="background:#f0fdf4;border:1px dashed #86efac;padding:14px;border-radius:12px">
+            <h3 style="margin:0 0 6px">Delivery</h3>
+            <p class="sub" style="margin:0">Call before 5 PM for **next-day** delivery (zone-based).</p>
           </div>
         </div>
       </div>
@@ -157,100 +138,136 @@
   <section id="services">
     <div class="container">
       <h2>Services</h2>
-      <p class="sub">Everything you expect from a full‑service community pharmacy.</p>
+      <p class="sub">Everything you expect from a full-service community pharmacy — and more.</p>
+
       <div class="grid-3">
-        <div class="card pad">
-          <div class="icon">💊</div>
-          <h3>Prescriptions</h3>
-          <p>Fast fills, automatic refills, and medication sync.</p>
+        <!-- Row 1 -->
+        <div class="card svc">
+          <div class="ico">👨‍⚕️</div>
+          <div>
+            <h3>Patient Counseling</h3>
+            <p>Personalized guidance on medications, side effects, and best practices for better outcomes.</p>
+          </div>
         </div>
-        <div class="card pad">
-          <div class="icon">🛡️</div>
-          <h3>Immunizations</h3>
-          <p>Flu, COVID‑19, shingles, and more (walk‑in welcome).</p>
+
+        <div class="card svc">
+          <div class="ico">🕒</div>
+          <div>
+            <h3>Med Synchronization</h3>
+            <p>Pick up all your meds on one convenient day each month — fewer trips, fewer hassles.</p>
+          </div>
         </div>
-        <div class="card pad">
-          <div class="icon">📦</div>
-          <h3>Pill Packs</h3>
-          <p>Weekly/monthly blister packs for easy, safe dosing.</p>
+
+        <div class="card svc">
+          <div class="ico">💉</div>
+          <div>
+            <h3>Vaccinations</h3>
+            <p>Flu, COVID-19, shingles, and more. Walk-ins welcome or call to schedule.</p>
+          </div>
         </div>
-        <div class="card pad">
-          <div class="icon">🧾</div>
-          <h3>Prior Auth Help</h3>
-          <p>We work with your prescriber and plan to resolve issues.</p>
+
+        <!-- Row 2 -->
+        <div class="card svc">
+          <div class="ico">🏪</div>
+          <div>
+            <h3>One-Stop Health Store</h3>
+            <p>OTC essentials, vitamins, household items — your wellness spot in one location.</p>
+          </div>
         </div>
-        <div class="card pad">
-          <div class="icon">🍼</div>
-          <h3>OTC Essentials</h3>
-          <p>Vitamins, pediatrics, first‑aid, and personal care.</p>
+
+        <div class="card svc">
+          <div class="ico">💳</div>
+          <div>
+            <h3>OTC Network</h3>
+            <p>We accept many OTC benefit cards to help you purchase eligible health items easily.</p>
+          </div>
         </div>
-        <div class="card pad">
-          <div class="icon">🚚</div>
-          <h3>Free Delivery</h3>
-          <p>Local delivery available—ask for zones & cutoff time.</p>
+
+        <div class="card svc">
+          <div class="ico">🔁</div>
+          <div>
+            <h3>Placid Money Transfer</h3>
+            <p>Send money securely with Placid. Competitive rates and quick transfers.</p>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="card svc">
+          <div class="ico">📱</div>
+          <div>
+            <h3>Phone Bill Pay</h3>
+            <p>Top-up & pay mobile bills (Lycamobile, Ultra, Simple Mobile, and more) — fast and simple.</p>
+          </div>
+        </div>
+
+        <div class="card svc">
+          <div class="ico">👁️</div>
+          <div>
+            <h3>DMV Vision Test</h3>
+            <p>Quick and convenient DMV vision screening to help you renew your license.</p>
+          </div>
+        </div>
+
+        <div class="card svc">
+          <div class="ico">🕋</div>
+          <div>
+            <h3>Halal Vitamins</h3>
+            <p>A curated selection of high-quality halal vitamins and supplements.</p>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="card svc">
+          <div class="ico">🛒</div>
+          <div>
+            <h3>Grocery Basics</h3>
+            <p>Everyday essentials and snacks — grab what you need while you pick up your prescriptions.</p>
+          </div>
+        </div>
+
+        <div class="card svc">
+          <div class="ico">📠</div>
+          <div>
+            <h3>Fax & Printing</h3>
+            <p>Quick faxing and document printing available in store.</p>
+          </div>
+        </div>
+
+        <div class="card svc">
+          <div class="ico">🧾</div>
+          <div>
+            <h3>Insurance Representative</h3>
+            <p>Help reviewing plans and understanding coverage. Bring your card and ID.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA row -->
+      <div class="card pad" style="margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div><strong>Need something today?</strong> Call us or browse our OTC catalog.</div>
+        <div style="display:flex;gap:10px">
+          <a class="cta" href="tel:+17188565998">Call 718-856-5998</a>
+          <a class="cta" style="background:var(--blue)" href="/shop">Open Shop</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- REFILL -->
-  <section id="refill" style="background:var(--soft)">
-    <div class="container">
-      <h2>Quick Refill</h2>
-      <p class="sub">For refills please call us directly. <strong>No text requests are accepted.</strong></p>
-      <div class="card pad">
-        <h3 style="margin-top:0">Call for Refill</h3>
-        <p><a class="cta" href="tel:+17188565998">Call 718‑856‑5998</a></p>
-        <p class="sub">Phone refills only • No texting</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- INSURANCE -->
-  <section id="insurance">
-    <div class="container">
-      <h2>Insurance & Payments</h2>
-      <div class="grid-2">
-        <div class="card pad">
-          <p class="sub">We accept most major plans. Bring your card and a valid ID.</p>
-          <ul>
-            <li>Medicare Part D & Medicaid Managed Care</li>
-            <li>Most commercial plans</li>
-            <li>HSA/FSA, cash, debit, and credit</li>
-          </ul>
-        </div>
-        <div class="card pad">
-          <h3 style="margin-top:0">Save on Rx</h3>
-          <p>Ask for generics and discount options to lower copays.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <div class="container">
-      <h2>What Our Customers Say</h2>
-      <p class="sub">Read real reviews on our Google Business Profile.</p>
-      <div style="margin-top:12px">
-        <a class="cta" href="https://www.google.com/maps/search/?api=1&query=Raees+Pharmacy+750+Flatbush+Ave+Brooklyn+NY+11226" target="_blank" rel="noopener">Read reviews on Google</a>
-      </div>
-      <!-- If you later want live reviews here, we can add a third‑party widget script (Elfsight/EmbedSocial). -->
-    </div>
-  </section>
-
-  <!-- CONTACT -->
+  <!-- CONTACT & MAP -->
   <section id="contact" style="background:var(--soft)">
     <div class="container">
       <h2>Contact & Location</h2>
       <div class="grid-2">
         <div class="card pad">
           <p><strong>Raees Pharmacy</strong><br>750 Flatbush Ave, Brooklyn, NY 11226</p>
-          <p>Phone: <a href="tel:+17188565998">718‑856‑5998</a><br>Fax: 718‑856‑5029<br>Email: <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></p>
+          <p>Phone: <a href="tel:+17188565998">718-856-5998</a><br>
+             Fax: 718-856-5029<br>
+             Email: <a href="mailto:raeespharmacy@gmail.com">raeespharmacy@gmail.com</a></p>
           <p class="sub">For emergencies call 911. For prescription questions, call us directly.</p>
         </div>
-        <div class="card map-card">
-          <iframe title="Map to Raees Pharmacy" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+        <div class="card" style="overflow:hidden">
+          <iframe title="Map to Raees Pharmacy" width="100%" height="300" style="border:0;border-radius:16px" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=750%20Flatbush%20Ave%2C%20Brooklyn%2C%20NY%2011226&output=embed"></iframe>
         </div>
       </div>
@@ -264,22 +281,11 @@
     </div>
   </footer>
 
-  <script>
-    // Year stamp
-    document.getElementById('year').textContent=new Date().getFullYear();
+  <!-- WhatsApp (optional) -->
+  <a class="wa-btn" href="https://wa.me/17188565998" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬 WhatsApp us</a>
 
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn?.addEventListener('click', () => {
-      const isOpen = mobileMenu.style.display === 'block';
-      mobileMenu.style.display = isOpen ? 'none' : 'block';
-      menuBtn.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
-    });
-    mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-      mobileMenu.style.display='none';
-      menuBtn.setAttribute('aria-label','Open menu');
-    }));
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
