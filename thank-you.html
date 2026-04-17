@@ -1,20 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You - Raees Pharmacy</title>
+  <meta name="description" content="Thank you for submitting your prescription transfer request." />
+
   <style>
-    body{font-family:Arial,sans-serif;background:#f8fafc;margin:0;padding:40px 20px;color:#1f2937}
-    .box{max-width:650px;margin:60px auto;background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:32px;text-align:center;box-shadow:0 12px 28px rgba(15,23,42,.08)}
-    a{display:inline-block;margin-top:18px;padding:12px 18px;background:#16a34a;color:#fff;text-decoration:none;border-radius:12px;font-weight:700}
+    :root{
+      --green:#16a34a;
+      --green-dark:#15803d;
+      --blue:#2563eb;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#d1d5db;
+      --bg:#f3f4f6;
+      --card:#ffffff;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      padding:24px 16px;
+    }
+
+    .wrap{
+      max-width:720px;
+      margin:0 auto;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+      overflow:hidden;
+      border:1px solid #e5e7eb;
+    }
+
+    .header{
+      padding:28px 28px 18px;
+      background:linear-gradient(135deg, #e8f5e9 0%, #eef6ff 100%);
+      border-bottom:1px solid #e5e7eb;
+      text-align:center;
+    }
+
+    .header h1{
+      margin:0 0 8px;
+      font-size:28px;
+      line-height:1.2;
+      font-weight:800;
+    }
+
+    .header p{
+      margin:0;
+      color:#374151;
+      font-size:15px;
+      line-height:1.6;
+    }
+
+    .body{
+      padding:28px;
+      text-align:center;
+    }
+
+    .check{
+      width:72px;
+      height:72px;
+      margin:0 auto 18px;
+      border-radius:999px;
+      background:#dcfce7;
+      color:var(--green);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:34px;
+      font-weight:700;
+    }
+
+    .message{
+      font-size:16px;
+      line-height:1.7;
+      color:#374151;
+      margin:0 auto 22px;
+      max-width:520px;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .btn{
+      appearance:none;
+      border:none;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 18px;
+      border-radius:12px;
+      font-size:15px;
+      font-weight:700;
+      cursor:pointer;
+      min-width:180px;
+    }
+
+    .btn-primary{
+      background:var(--green);
+      color:#fff;
+      box-shadow:0 8px 18px rgba(22,163,74,0.2);
+    }
+
+    .btn-primary:hover{
+      background:var(--green-dark);
+    }
+
+    .btn-secondary{
+      background:#eef2ff;
+      color:#1d4ed8;
+    }
+
+    .small{
+      margin-top:18px;
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    @media (max-width: 700px){
+      body{
+        padding:16px 12px;
+      }
+
+      .header{
+        padding:22px 20px 16px;
+      }
+
+      .body{
+        padding:20px;
+      }
+
+      .header h1{
+        font-size:24px;
+      }
+
+      .btn{
+        width:100%;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Thank You</h1>
-    <p>Your prescription transfer request has been submitted. A member of our pharmacy team will contact you shortly.</p>
-    <a href="https://raeespharmacy.com/">Return to Homepage</a>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <h1>Thank You</h1>
+        <p>Your prescription transfer request has been submitted successfully.</p>
+      </div>
+
+      <div class="body">
+        <div class="check">✓</div>
+
+        <p class="message">
+          A member of the Raees Pharmacy team will review your request and contact you shortly to complete the transfer.
+        </p>
+
+        <div class="actions">
+          <a href="https://raeespharmacy.com/" class="btn btn-primary">Return to Homepage</a>
+          <a href="tel:+17188565998" class="btn btn-secondary">Call Pharmacy</a>
+        </div>
+
+        <div class="small">
+          For urgent questions, please call the pharmacy directly during business hours.
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
