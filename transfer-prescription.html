@@ -145,60 +145,65 @@
 
       <!-- ✅ FORM -->
       <form action="https://formspree.io/f/xpqkddgv" method="POST">
+  <input type="hidden" name="_subject" value="New Prescription Transfer - Raees Pharmacy">
+  <input type="hidden" name="_redirect" value="https://raeespharmacy.com/thank-you.html">
+  <input type="hidden" name="_template" value="table">
 
-        <input type="hidden" name="_subject" value="New Prescription Transfer - Raees Pharmacy">
-        <input type="hidden" name="_redirect" value="https://raeespharmacy.com/thank-you.html">
+  <div class="grid">
 
-        <div class="grid">
+    <div class="field">
+      <label for="full_name">Full Name</label>
+      <input id="full_name" type="text" name="full_name" placeholder="Enter full name" required>
+    </div>
 
-          <div class="field">
-            <label>Full Name</label>
-            <input type="text" name="full_name" required>
-          </div>
+    <div class="field">
+      <label for="dob">Date of Birth</label>
+      <input id="dob" type="text" name="dob" placeholder="MM/DD/YYYY" required>
+    </div>
 
-          <div class="field">
-            <label>Date of Birth</label>
-            <input type="text" name="dob" placeholder="MM/DD/YYYY" required>
-          </div>
+    <div class="field">
+      <label for="phone">Phone Number</label>
+      <input id="phone" type="text" name="phone" placeholder="Enter phone number" required>
+    </div>
 
-          <div class="field">
-            <label>Phone Number</label>
-            <input type="text" name="phone" required>
-          </div>
+    <div class="field">
+      <label for="current_pharmacy">Current Pharmacy Name</label>
+      <input id="current_pharmacy" type="text" name="current_pharmacy" placeholder="Current pharmacy name" required>
+    </div>
 
-          <div class="field">
-            <label>Current Pharmacy Name</label>
-            <input type="text" name="pharmacy_name" required>
-          </div>
+    <div class="field">
+      <label for="pharmacy_phone">Current Pharmacy Phone Number</label>
+      <input id="pharmacy_phone" type="text" name="pharmacy_phone" placeholder="Current pharmacy phone number">
+    </div>
 
-          <div class="field">
-            <label>Current Pharmacy Phone</label>
-            <input type="text" name="pharmacy_phone">
-          </div>
+    <div class="field">
+      <label for="address">Address (optional)</label>
+      <input id="address" type="text" name="address" placeholder="Enter address">
+    </div>
 
-          <div class="field">
-            <label>Address (optional)</label>
-            <input type="text" name="address">
-          </div>
+    <div class="field">
+      <label for="medication_name">Medication Names (optional)</label>
+      <textarea id="medication_name" name="medication_name" placeholder="List medication names if known"></textarea>
+      <div class="small">List medication names only when possible.</div>
+    </div>
 
-          <div class="field">
-            <label>Medication Names (optional)</label>
-            <textarea name="medications"></textarea>
-          </div>
+  </div>
 
-        </div>
+  <label class="consent">
+    <input type="checkbox" name="consent" required>
+    <span>I consent to be contacted by Raees Pharmacy regarding my prescription transfer request.</span>
+  </label>
 
-        <div class="actions">
-          <button type="submit">Submit Transfer Request</button>
-        </div>
+  <div class="actions">
+    <button type="submit" class="btn btn-primary">Submit Transfer Request</button>
+    <a href="tel:+17188565998" class="btn btn-secondary">Call Pharmacy</a>
+    <a href="https://wa.me/17188565998" class="btn btn-secondary">WhatsApp Us</a>
+  </div>
 
-        <div class="extra-buttons">
-          <a href="tel:+1XXXXXXXXXX" class="call">Call Pharmacy</a>
-          <a href="https://wa.me/1XXXXXXXXXX" class="whatsapp">WhatsApp Us</a>
-        </div>
-
-      </form>
-
+  <div class="footer-note">
+    By submitting this request, you are asking Raees Pharmacy to contact you to help complete your prescription transfer.
+  </div>
+</form>
     </div>
   </div>
 </div>
