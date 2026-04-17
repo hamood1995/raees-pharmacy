@@ -3,187 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You - Raees Pharmacy</title>
-  <meta name="description" content="Thank you for submitting your prescription transfer request." />
+  <title>Transfer Prescription - Raees Pharmacy</title>
 
   <style>
-    :root{
-      --green:#16a34a;
-      --green-dark:#15803d;
-      --blue:#2563eb;
-      --text:#111827;
-      --muted:#6b7280;
-      --border:#d1d5db;
-      --bg:#f3f4f6;
-      --card:#ffffff;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 20px;
     }
 
-    *{
-      box-sizing:border-box;
+    .wrap {
+      max-width: 700px;
+      margin: auto;
     }
 
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      padding:24px 16px;
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
-    .wrap{
-      max-width:720px;
-      margin:0 auto;
+    h1 {
+      margin-top: 0;
     }
 
-    .card{
-      background:var(--card);
-      border-radius:18px;
-      box-shadow:0 12px 30px rgba(0,0,0,0.08);
-      overflow:hidden;
-      border:1px solid #e5e7eb;
+    .notice {
+      background: #fef3c7;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 14px;
     }
 
-    .header{
-      padding:28px 28px 18px;
-      background:linear-gradient(135deg, #e8f5e9 0%, #eef6ff 100%);
-      border-bottom:1px solid #e5e7eb;
-      text-align:center;
+    .help {
+      background: #e0f2fe;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
     }
 
-    .header h1{
-      margin:0 0 8px;
-      font-size:28px;
-      line-height:1.2;
-      font-weight:800;
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
     }
 
-    .header p{
-      margin:0;
-      color:#374151;
-      font-size:15px;
-      line-height:1.6;
+    .field {
+      display: flex;
+      flex-direction: column;
     }
 
-    .body{
-      padding:28px;
-      text-align:center;
+    label {
+      font-size: 13px;
+      margin-bottom: 4px;
     }
 
-    .check{
-      width:72px;
-      height:72px;
-      margin:0 auto 18px;
-      border-radius:999px;
-      background:#dcfce7;
-      color:var(--green);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:34px;
-      font-weight:700;
+    input, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
     }
 
-    .message{
-      font-size:16px;
-      line-height:1.7;
-      color:#374151;
-      margin:0 auto 22px;
-      max-width:520px;
+    textarea {
+      grid-column: span 2;
     }
 
-    .actions{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:18px;
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .btn{
-      appearance:none;
-      border:none;
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:13px 18px;
-      border-radius:12px;
-      font-size:15px;
-      font-weight:700;
-      cursor:pointer;
-      min-width:180px;
+    .btn {
+      padding: 12px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
     }
 
-    .btn-primary{
-      background:var(--green);
-      color:#fff;
-      box-shadow:0 8px 18px rgba(22,163,74,0.2);
+    .primary {
+      background: #16a34a;
+      color: white;
     }
 
-    .btn-primary:hover{
-      background:var(--green-dark);
+    .secondary {
+      background: #2563eb;
+      color: white;
     }
 
-    .btn-secondary{
-      background:#eef2ff;
-      color:#1d4ed8;
+    .whatsapp {
+      background: #25D366;
+      color: white;
     }
 
-    .small{
-      margin-top:18px;
-      font-size:12px;
-      color:var(--muted);
-      line-height:1.6;
+    .small {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #6b7280;
     }
 
-    @media (max-width: 700px){
-      body{
-        padding:16px 12px;
+    @media(max-width:600px){
+      .grid {
+        grid-template-columns: 1fr;
       }
 
-      .header{
-        padding:22px 20px 16px;
-      }
-
-      .body{
-        padding:20px;
-      }
-
-      .header h1{
-        font-size:24px;
-      }
-
-      .btn{
-        width:100%;
+      textarea {
+        grid-column: span 1;
       }
     }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="card">
-      <div class="header">
-        <h1>Thank You</h1>
-        <p>Your prescription transfer request has been submitted successfully.</p>
-      </div>
 
-      <div class="body">
-        <div class="check">✓</div>
+<div class="wrap">
+  <div class="card">
 
-        <p class="message">
-          A member of the Raees Pharmacy team will review your request and contact you shortly to complete the transfer.
-        </p>
+    <h1>Transfer Your Prescription</h1>
+    <p>Send us your request and our pharmacy team will contact you to complete the transfer securely.</p>
 
-        <div class="actions">
-          <a href="https://raeespharmacy.com/" class="btn btn-primary">Return to Homepage</a>
-          <a href="tel:+17188565998" class="btn btn-secondary">Call Pharmacy</a>
-        </div>
-
-        <div class="small">
-          For urgent questions, please call the pharmacy directly during business hours.
-        </div>
-      </div>
+    <div class="notice">
+      Please do not include insurance numbers, ID numbers, or payment information in this form.
     </div>
+
+    <div class="help">
+      Provide your name, DOB, phone, pharmacy info, and meds (optional).
+    </div>
+
+    <!-- ✅ FIXED FORM -->
+    <form action="https://formspree.io/f/xpqkddgv" method="POST">
+
+      <!-- ✅ IMPORTANT FIX -->
+      <input type="hidden" name="_next" value="https://raeespharmacy.com/thank-you.html">
+      <input type="hidden" name="_subject" value="New Prescription Transfer - Raees Pharmacy">
+
+      <div class="grid">
+
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" name="full_name" required>
+        </div>
+
+        <div class="field">
+          <label>Date of Birth</label>
+          <input type="text" name="dob" placeholder="MM/DD/YYYY" required>
+        </div>
+
+        <div class="field">
+          <label>Phone Number</label>
+          <input type="text" name="phone" required>
+        </div>
+
+        <div class="field">
+          <label>Current Pharmacy</label>
+          <input type="text" name="pharmacy_name">
+        </div>
+
+        <div class="field">
+          <label>Pharmacy Phone</label>
+          <input type="text" name="pharmacy_phone">
+        </div>
+
+        <div class="field">
+          <label>Address (optional)</label>
+          <input type="text" name="address">
+        </div>
+
+        <div class="field" style="grid-column: span 2;">
+          <label>Medication Names (optional)</label>
+          <textarea name="medications" rows="4"></textarea>
+        </div>
+
+      </div>
+
+      <div style="margin-top:15px;">
+        <input type="checkbox" required>
+        I consent to be contacted by Raees Pharmacy regarding my request.
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn primary">Submit Transfer Request</button>
+        <a href="tel:+17188565998" class="btn secondary">Call Pharmacy</a>
+        <a href="#" class="btn whatsapp">WhatsApp Us</a>
+      </div>
+
+      <div class="small">
+        By submitting, you allow Raees Pharmacy to contact you to complete your prescription transfer.
+      </div>
+
+    </form>
+
   </div>
+</div>
+
 </body>
 </html>
