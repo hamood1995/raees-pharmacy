@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial;
-      background: #f4f6f8;
+      background: #f3f4f6;
       padding: 20px;
     }
 
@@ -17,24 +17,14 @@
     }
 
     .card {
-      background: white;
+      background: #fff;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .top {
-      background: #e8f5e9;
       padding: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     }
 
-    .top h1 {
-      margin: 0;
-      font-size: 22px;
-    }
-
-    .body {
-      padding: 20px;
+    h1 {
+      margin-bottom: 5px;
     }
 
     .notice {
@@ -46,7 +36,7 @@
     }
 
     .help {
-      background: #e3f2fd;
+      background: #e6f4ea;
       padding: 10px;
       border-radius: 6px;
       margin-bottom: 15px;
@@ -56,53 +46,58 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 12px;
     }
 
     .field label {
       font-size: 13px;
       display: block;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
     input, textarea {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
       border-radius: 6px;
+      border: 1px solid #ccc;
     }
 
     textarea {
       min-height: 80px;
     }
 
-    .actions {
-      margin-top: 15px;
+    .small {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
     }
 
-    button {
-      background: #16a34a;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .extra-buttons {
+    .consent {
       display: flex;
       gap: 10px;
-      margin-top: 10px;
+      margin-top: 15px;
+      font-size: 14px;
     }
 
-    .extra-buttons a {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 16px;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .submit {
+      background: #16a34a;
+      color: white;
     }
 
     .call {
@@ -115,7 +110,13 @@
       color: white;
     }
 
-    @media (max-width: 700px) {
+    .footer-note {
+      font-size: 12px;
+      margin-top: 10px;
+      color: #666;
+    }
+
+    @media(max-width:700px){
       .grid {
         grid-template-columns: 1fr;
       }
@@ -128,83 +129,78 @@
 <div class="wrap">
   <div class="card">
 
-    <div class="top">
-      <h1>Transfer Your Prescription</h1>
-      <p>Send us your request and our pharmacy team will contact you to complete the transfer securely.</p>
+    <h1>Transfer Your Prescription</h1>
+    <p>Send your request and we will contact you to complete the transfer securely.</p>
+
+    <div class="notice">
+      Please do not include insurance numbers, ID numbers, or payment info.
     </div>
 
-    <div class="body">
+    <div class="help">
+      Provide your name, DOB, phone, pharmacy info, and meds (optional).
+    </div>
 
-      <div class="notice">
-        Please do not include highly sensitive medical details, insurance numbers, ID numbers, or payment information in this form.
+    <form action="https://formspree.io/f/xpqkddgv" method="POST">
+      
+      <input type="hidden" name="_redirect" value="https://raeespharmacy.com/thank-you.html">
+
+      <div class="grid">
+
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" name="name" required>
+        </div>
+
+        <div class="field">
+          <label>Date of Birth</label>
+          <input type="text" name="dob" required>
+        </div>
+
+        <div class="field">
+          <label>Phone Number</label>
+          <input type="text" name="phone" required>
+        </div>
+
+        <div class="field">
+          <label>Current Pharmacy</label>
+          <input type="text" name="pharmacy" required>
+        </div>
+
+        <div class="field">
+          <label>Pharmacy Phone</label>
+          <input type="text" name="pharmacy_phone">
+        </div>
+
+        <div class="field">
+          <label>Address (optional)</label>
+          <input type="text" name="address">
+        </div>
+
+        <div class="field">
+          <label>Medication Names (optional)</label>
+          <textarea name="meds"></textarea>
+          <div class="small">List medication names only.</div>
+        </div>
+
       </div>
 
-      <div class="help">
-        Provide your name, date of birth, phone number, current pharmacy info, and medications (optional).
+      <div class="consent">
+        <input type="checkbox" required>
+        <span>I consent to be contacted by Raees Pharmacy regarding my request.</span>
       </div>
 
-      <!-- ✅ FORM -->
-      <form action="https://formspree.io/f/xpqkddgv" method="POST">
-  <input type="hidden" name="_subject" value="New Prescription Transfer - Raees Pharmacy">
-  <input type="hidden" name="_redirect" value="https://raeespharmacy.com/thank-you.html">
-  <input type="hidden" name="_template" value="table">
+      <div class="actions">
+        <button type="submit" class="btn submit">Submit Transfer Request</button>
+        <a href="tel:+17188565998" class="btn call">Call Pharmacy</a>
+        <a href="https://wa.me/17188565998" class="btn whatsapp">WhatsApp Us</a>
+      </div>
 
-  <div class="grid">
+      <div class="footer-note">
+        By submitting, you allow Raees Pharmacy to contact you to complete your prescription transfer.
+      </div>
 
-    <div class="field">
-      <label for="full_name">Full Name</label>
-      <input id="full_name" type="text" name="full_name" placeholder="Enter full name" required>
-    </div>
+    </form>
 
-    <div class="field">
-      <label for="dob">Date of Birth</label>
-      <input id="dob" type="text" name="dob" placeholder="MM/DD/YYYY" required>
-    </div>
-
-    <div class="field">
-      <label for="phone">Phone Number</label>
-      <input id="phone" type="text" name="phone" placeholder="Enter phone number" required>
-    </div>
-
-    <div class="field">
-      <label for="current_pharmacy">Current Pharmacy Name</label>
-      <input id="current_pharmacy" type="text" name="current_pharmacy" placeholder="Current pharmacy name" required>
-    </div>
-
-    <div class="field">
-      <label for="pharmacy_phone">Current Pharmacy Phone Number</label>
-      <input id="pharmacy_phone" type="text" name="pharmacy_phone" placeholder="Current pharmacy phone number">
-    </div>
-
-    <div class="field">
-      <label for="address">Address (optional)</label>
-      <input id="address" type="text" name="address" placeholder="Enter address">
-    </div>
-
-    <div class="field">
-      <label for="medication_name">Medication Names (optional)</label>
-      <textarea id="medication_name" name="medication_name" placeholder="List medication names if known"></textarea>
-      <div class="small">List medication names only when possible.</div>
-    </div>
-
-  </div>
-
-  <label class="consent">
-    <input type="checkbox" name="consent" required>
-    <span>I consent to be contacted by Raees Pharmacy regarding my prescription transfer request.</span>
-  </label>
-
-  <div class="actions">
-    <button type="submit" class="btn btn-primary">Submit Transfer Request</button>
-    <a href="tel:+17188565998" class="btn btn-secondary">Call Pharmacy</a>
-    <a href="https://wa.me/17188565998" class="btn btn-secondary">WhatsApp Us</a>
-  </div>
-
-  <div class="footer-note">
-    By submitting this request, you are asking Raees Pharmacy to contact you to help complete your prescription transfer.
-  </div>
-</form>
-    </div>
   </div>
 </div>
 
