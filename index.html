@@ -35,22 +35,23 @@ header{
 
 nav{
   display:flex;
-  align-items:center;
+  align-items:center;      /* vertically centers all items */
   justify-content:space-between;
-  padding:0;              /* no extra top/bottom padding */
+  min-height:64px;
+  padding:0;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  height:70px;            /* fixed header height */
+  height:64px;
 }
 
 .brand img{
-  height:70px;            /* logo size */
+  height:54px;
   width:auto;
   display:block;
-  margin:0;               /* remove gap */
+  margin-top:2px;         /* pushes logo slightly down */
 }
 
 /* thinner header */
