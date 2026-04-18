@@ -25,19 +25,32 @@
     .container{max-width:1180px;margin:0 auto;padding:0 20px}
 
     /* Header */
-   header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--border)}
-nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:5px 0;
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#fff;
+  border-bottom:1px solid var(--border);
 }
-.brand{display:flex;align-items:center;gap:12px}
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:2px 0;   /* thinner white bar */
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
 .brand img{
-  height:95px;
+  height:78px;     /* big logo */
   width:auto;
   display:block;
+  margin:-8px 0;   /* trims extra top/bottom white space */
 }
 
 .navlinks a{margin-left:18px;font-weight:600;color:var(--ink)}
@@ -135,7 +148,7 @@ alt="Raees Pharmacy Logo">
       <!-- TRANSFER BUTTON -->
       <div>
         <a href="/transfer-prescription.html"
-           style="display:inline-block;background:#16a34a;color:#fff;padding:14px 26px;border-radius:12px;font-weight:700;font-size:16px;box-shadow:0 6px 14px rgba(0,0,0,0.15);text-decoration:none;margin-top:18px;">
+           style=":inline-block;background:#16a34a;color:#fff;padding:14px 26px;border-radius:12px;font-weight:700;font-size:16px;box-shadow:0 6px 14px rgba(0,0,0,0.15);text-decoration:none;margin-top:18px;">
            Transfer Prescription Now
         </a>
       </div>
@@ -254,7 +267,7 @@ alt="Raees Pharmacy Logo">
   </section>
 
   <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div class="container" style=":flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <div>© <span id="year"></span> Raees Pharmacy</div>
       <div>HIPAA: We protect your privacy and never share health info without consent.</div>
     </div>
