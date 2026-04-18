@@ -35,22 +35,25 @@ header{
 
 /* MOVE LOGO FURTHER LEFT */
 
-.container{
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 8px;      /* smaller side gap */
+nav{
+  display:flex;
+  align-items:center;      /* vertically centers all items */
+  justify-content:space-between;
+  min-height:64px;
+  padding:0;
 }
 
 .brand{
-  margin-left:-55px;  /* move logo left more */
   display:flex;
   align-items:center;
+  height:64px;
 }
 
 .brand img{
   height:54px;
   width:auto;
   display:block;
+  margin-top:2px;         /* pushes logo slightly down */
 }
 
 /* thinner header */
