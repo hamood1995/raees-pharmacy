@@ -37,21 +37,28 @@ nav{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:2px 0;   /* thinner white bar */
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
+  padding:2px 0;
 }
 
 .brand img{
-  height:72px;          /* bigger logo */
+  height:78px;
   width:auto;
   display:block;
-  object-fit:contain;
-  margin:-6px 0;        /* removes extra white top/bottom space */
+  margin:-8px 0;
+}
+
+/* HERO LEFT SIDE */
+.hero .badges{
+  margin-bottom:18px;
+}
+
+/* TRANSFER BUTTON UNDER BADGES */
+.hero .btn,
+.hero a[href*="transfer-prescription"]{
+  display:inline-block;
+  margin-top:8px;
+  position:relative;
+  z-index:5;
 }
 
 .navlinks a{margin-left:18px;font-weight:600;color:var(--ink)}
