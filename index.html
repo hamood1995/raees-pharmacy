@@ -37,19 +37,26 @@ nav{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:2px 0;
+  padding:0;              /* no extra top/bottom padding */
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  height:70px;            /* fixed header height */
 }
 
 .brand img{
-  height:78px;
+  height:62px;            /* logo size */
   width:auto;
   display:block;
-  margin:-8px 0;
+  margin:0;               /* remove gap */
 }
 
-/* HERO LEFT SIDE */
-.hero .badges{
-  margin-bottom:18px;
+/* thinner header */
+header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
 }
 
 /* TRANSFER BUTTON UNDER BADGES */
